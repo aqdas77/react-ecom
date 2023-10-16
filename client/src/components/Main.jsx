@@ -31,7 +31,7 @@ const Main = () => {
 
   const fetchProducts = () => {
     axios
-      .get("http://localhost:8080/api/products")
+      .get("https://react-ecom-kl1t.onrender.com/api/products")
       .then((response) => {
         setProducts(response.data);
       })
@@ -48,7 +48,7 @@ const Main = () => {
     e.preventDefault();
 
     try {
-      const url = "http://localhost:8080/api/products";
+      const url = "https://react-ecom-kl1t.onrender.com/api/products";
       const res = await axios.post(url, data);
 
       if (res.status === 201) {
@@ -83,7 +83,7 @@ const Main = () => {
     if (!selectedProductToDelete) return;
 
     try {
-      const url = `http://localhost:8080/api/products/${selectedProductToDelete._id}`;
+      const url = `https://react-ecom-kl1t.onrender.com/api/products/${selectedProductToDelete._id}`;
       const res = await axios.delete(url);
 
       if (res.status === 200) {

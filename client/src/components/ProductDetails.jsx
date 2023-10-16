@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
 import Grid from '@mui/material/Grid';
 import { Box,Button, Typography } from "@mui/material";
@@ -13,7 +12,7 @@ const ProductDetails = () => {
   useEffect(() => {
     // Fetch product details based on productId when the component mounts
     axios
-      .get(`http://localhost:8080/api/products/${productId}`)
+      .get(`https://react-ecom-kl1t.onrender.com/api/products/${productId}`)
       .then((response) => {
         setProduct(response.data);
       })
